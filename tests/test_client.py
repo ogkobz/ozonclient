@@ -38,12 +38,12 @@ def build(responses=(), *, clock=None, **kwargs):
 
 
 def test_writing_method_blocked_by_default():
-    """У Ozon нет песочницы — случайный POST меняет живые цены."""
+    """Рабочая среда Ozon — живой магазин: случайный POST меняет цены."""
     client, transport = build()
     with pytest.raises(OzonWriteBlockedError) as exc:
         client.call("prices_import", {"prices": []})
     assert transport.calls == []
-    assert "песочниц" in str(exc.value)
+    assert "живой магазин" in str(exc.value)
     assert "allow_writes=True" in str(exc.value)
 
 
