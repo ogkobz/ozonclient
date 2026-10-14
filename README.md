@@ -1,5 +1,7 @@
 # ozonclient
 
+[![tests](https://github.com/ogkobz/ozonclient/actions/workflows/tests.yml/badge.svg)](https://github.com/ogkobz/ozonclient/actions/workflows/tests.yml)
+
 Клиент Ozon Seller API на Python: реестр методов с версиями, защита от случайной записи в боевой магазин, соблюдение лимитов и понятные ошибки.
 
 Библиотека закрывает ту часть работы с API, которую иначе пишешь заново в каждом проекте, и не лезет в бизнес-логику — она у каждого продавца своя.
